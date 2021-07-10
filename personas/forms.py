@@ -10,3 +10,14 @@ class PersonaForm(ModelForm):
 		widgets = {
 			'email': EmailInput(attrs={'type':'email'})
 		}
+
+'''
+class DomicilioForm(ModelForm):
+	"""docstring for PersonaForm"""
+	class Meta():
+		model = Domicilio
+		fields = '__all__'
+		widgets = {
+			'no_calle': TextInput(attrs={'type':'number'})
+		}
+'''
