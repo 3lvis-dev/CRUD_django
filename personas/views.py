@@ -47,5 +47,3 @@ def eliminarPersona(request, id):
 	if persona:
 		persona.delete()
 	return redirect('home')
-
-	
