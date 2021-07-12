@@ -27,4 +27,8 @@ urlpatterns = [
     path('editar_persona/<int:id>', editarPersona),
     path('eliminar_persona/<int:id>', eliminarPersona),
     path('domicilios/', domicilios),
+    #path('detalle_domicilio/<int:id>', detalleDomicilio),
+    #path('nuevo_domicilio', nuevoDomicilio),
+    #path('editar_domicilio/<int:id>', editarDomicilio),
+    #path('eliminar_domicilio/<int:id>', eliminarDomicilio),
 ]
