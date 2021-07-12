@@ -1,6 +1,3 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from personas.models import Persona
-from personas.forms import PersonaForm
 from django.forms import modelform_factory
 
 # Create your views here.

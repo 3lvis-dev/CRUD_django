@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Domicilios</title>
+</head>
+<body>
+	<h2>Domicilios</h2>
+	<div>
+		<strong>Número de Domicilios:</strong> {{no_domicilios}}
+	</div>
+<br/>
+	<div>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>ID:</th>
+					<th>Calle</th>
+					<th>N° de Calle</th>
+					<th>País</th>
+					<th>Ver</th>
+					<th>Editar</th>
+					<th>Eliminar</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for persona in personas %}
+				<tr>
+					<td>ID Domicilios</td>
+					<td>Calles</td>
+					<td>N° de Calles</td>
+					<td>Paises</td>
+					<td><a href="#">Ver</a></td>
+					<td><a href="#">Editar</a></td>
+					<td><a href="#">Eliminar</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+<div>
+<br/>
+	<h4>Los ID pueden cambiar dependiendo de las pruebas que se realicen</h4>
+</div>
+
+</body>
+</html>
