@@ -44,3 +44,6 @@ def eliminarPersona(request, id):
 	if persona:
 		persona.delete()
 	return redirect('home')
+
+# Metodos CRUD para Domicilios ***************************************
+#*** Metodo de ver que equivale al Read de nuestro CRUD *************

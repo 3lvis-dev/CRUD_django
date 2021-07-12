@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Domicilios</title>
 </head>
 <body>
+	<div>
+		<a href="{% url 'home' %}">Regresar al Home</a>
+	</div>
 	<h2>Domicilios</h2>
 	<div>
 		<strong>Número de Domicilios:</strong> {{no_domicilios}}
@@ -23,12 +27,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				{% for persona in personas %}
+				{% for domicilio in domicilios %}
 				<tr>
-					<td>ID Domicilios</td>
-					<td>Calles</td>
-					<td>N° de Calles</td>
-					<td>Paises</td>
+					<td>{{domicilio.id}}</td>
+					<td>{{domicilio.calle}}</td>
+					<td>{{domicilio.no_calle}}</td>
+					<td>{{domicilio.pais}}</td>
 					<td><a href="#">Ver</a></td>
 					<td><a href="#">Editar</a></td>
 					<td><a href="#">Eliminar</a></td>
@@ -42,5 +46,9 @@
 	<h4>Los ID pueden cambiar dependiendo de las pruebas que se realicen</h4>
 </div>
 
+<div>
+	ID's: {{domicilios.id}}
+	Calles:	 {{domicilios.calle}}
+</div>
 </body>
 </html>

@@ -12,7 +12,7 @@ class Domicilio(models.Model):
 		return f'''Domicilio {self.id}: 
 		Calle: {self.calle} 
 		N° de Calle: {self.no_calle} 
-		País: {self.pais}'''
+		País: {self.pais} '''
 
 
 class Persona(models.Model):
