@@ -12,6 +12,6 @@ def home(request):
 
 def domicilios(request):
 	no_domicilios = Domicilio.objects.count()
-	domicilios = Domicilio.objects.all()
-	#domicilios = Domicilio.objects.order_by('id')
+	#domicilios = Domicilio.objects.all()
+	domicilios = Domicilio.objects.order_by('id')
 	return render(request, 'domicilios.html', {'no_domicilios':no_domicilios, 'domicilios':domicilios})

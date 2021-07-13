@@ -1,5 +1,5 @@
-from django.forms import ModelForm, EmailInput
-from personas.models import Persona
+from django.forms import ModelForm, EmailInput, TextInput
+from personas.models import Persona, Domicilio
 
 
 class PersonaForm(ModelForm):
@@ -11,7 +11,7 @@ class PersonaForm(ModelForm):
 			'email': EmailInput(attrs={'type':'email'})
 		}
 
-'''
+
 class DomicilioForm(ModelForm):
 	"""docstring for PersonaForm"""
 	class Meta():
@@ -20,4 +20,3 @@ class DomicilioForm(ModelForm):
 		widgets = {
 			'no_calle': TextInput(attrs={'type':'number'})
 		}
-'''

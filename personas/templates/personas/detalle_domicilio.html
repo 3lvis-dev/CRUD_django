@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Detalle Domicilio</title>
+</head>
+<body>
+	<h2>Detalle Domicilio</h2>
+
+	<div>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>ID Domicilio:</th>
+					<th>Calle</th>
+					<th>N° de Calle</th>
+					<th>País</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{domicilio.id}}</td>
+					<td>{{domicilio.calle}}</td>
+					<td>{{domicilio.no_calle}}</td>
+					<td>{{domicilio.pais}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<br/>
+<div>
+	<a href="{% url 'home' %}">Regresar al Home</a>
+</div>
+
+</body>
+</html>
