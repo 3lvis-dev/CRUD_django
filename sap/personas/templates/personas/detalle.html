@@ -5,14 +5,37 @@
 	<title>Detalle Persona</title>
 </head>
 <body>
-	<h2>Detalle Persona</h2>
-	<div>ID Persona: {{persona.id}}</div>
-	<div>Nombre: {{persona.nombre}}</div>
-	<div>Apellido: {{persona.apellido}}</div>
-	<div>Email: {{persona.email}}</div>
+	
+<h2><strong>Sistema de Administración de Personas</strong></h2>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th colspan="2">Detalle Persona</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><strong>ID Persona:</strong></td>
+				<td>{{persona.id}}</td>
+			</tr>
+			<tr>
+				<td><strong>Nombre:</strong></td>
+				<td>{{persona.nombre}}</td>
+			</tr>
+			<tr>
+				<td><strong>Apellido:</strong></td>
+				<td>{{persona.apellido}}</td>
+			</tr>
+			<tr>
+				<td><strong>Email:</strong></td>
+				<td>{{persona.email}}</td>
+			</tr>
+		</tbody>
+	</table>
 <br/>
 <div>
-	<a href="{% url 'home' %}">Regresar al Home</a>
+	<a href="{% url 'home' %}"><strong>VOLVER AL HOME</strong></a>
 </div>
 
 </body>

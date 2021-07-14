@@ -5,31 +5,37 @@
 	<title>Detalle Domicilio</title>
 </head>
 <body>
-	<h2>Detalle Domicilio</h2>
 
-	<div>
-		<table border="1">
-			<thead>
-				<tr>
-					<th>ID Domicilio:</th>
-					<th>Calle</th>
-					<th>N° de Calle</th>
-					<th>País</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>{{domicilio.id}}</td>
-					<td>{{domicilio.calle}}</td>
-					<td>{{domicilio.no_calle}}</td>
-					<td>{{domicilio.pais}}</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+<h2><strong>Sistema de Administración de Personas</strong></h2>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th colspan="2">Detalle Domicilio</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><strong>ID Domicilio:</strong></td>
+				<td>{{domicilio.id}}</td>
+			</tr>
+			<tr>
+				<td><strong>Calle:</strong></td>
+				<td>{{domicilio.calle}}</td>
+			</tr>
+			<tr>
+				<td><strong>N° de Calle:</strong></td>
+				<td>{{domicilio.no_calle}}</td>
+			</tr>
+			<tr>
+				<td><strong>País:</strong></td>
+				<td>{{domicilio.pais}}</td>
+			</tr>
+		</tbody>
+	</table>
 <br/>
 <div>
-	<a href="{% url 'home' %}">Regresar al Home</a>
+	<a href="/domicilios"><strong>VOLVER A DOMICILIOS</strong></a>
 </div>
 
 </body>

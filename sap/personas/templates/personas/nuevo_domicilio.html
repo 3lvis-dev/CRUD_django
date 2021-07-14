@@ -2,9 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Editar Persona</title>
+	<title>Nuevo Domicilio</title>
 </head>
 <body>
+
+<div>
+	<a href="/domicilios"><strong>VOLVER A DOMICILIOS</strong></a>
+</div>
 
 <h2><strong>Sistema de Administración de Personas</strong></h2>
 
@@ -12,25 +16,19 @@
 		<table>
 			<thead>
 				<tr>
-					<th colspan="100%">Editar Persona</th>
+					<th colspan="100%">Nuevo Domicilio</th>
 				</tr>
-				
 			</thead>
 				<tbody>
 					<tr>
-						<td>{{formaPersona}}</td>
+						<td>{{formaDomicilio}}</td>
 					</tr>
 				</tbody>
 		</table>
 		<br/>
-		<button type="submit">EDITAR</button>
+		<button type="submit">AGREGAR</button>
 		{% csrf_token %}
 	</form>
-<br/>
-<div>
-	<a href="{% url 'home' %}">VOLVER AL HOME</a>
-</div>
-
 
 </body>
 </html>

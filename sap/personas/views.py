@@ -1,6 +1,6 @@
 from django.forms import modelform_factory
 from django.shortcuts import render, get_object_or_404, redirect
-from personas.forms import PersonaForm
+from personas.forms import PersonaForm, DomicilioForm
 from personas.models import Persona, Domicilio
 
 # Create your views here.
@@ -49,43 +49,41 @@ def eliminarPersona(request, id):
 	return redirect('home')
 
 # Metodos CRUD para Domicilios ***************************************
-#*** Metodo de ver que equivale al Read de nuestro CRUD *************
+
+#*** VER, equivale al Read de nuestro CRUD *************
 def detalleDomicilio(request, id):
-	#domicilio = Domicilio.objects.get(pk=id)
 	domicilio = get_object_or_404(Domicilio, pk=id)
 	return render(request, 'personas/detalle_domicilio.html', {'domicilio':domicilio})
 
 
-#*** Metodo de agregar que equivale al Create de nuestro CRUD *************
-'''
-def nuevaPersona(request):
+#*** AGREGAR, equivale al Create de nuestro CRUD *************
+def nuevoDomicilio(request):
 	if request.method == 'POST':
-		formaPersona = PersonaForm(request.POST)
-		if formaPersona.is_valid():
-			formaPersona.save()
-			return redirect('home')
+		formaDomicilio = DomicilioForm(request.POST)
+		if formaDomicilio.is_valid():
+			formaDomicilio.save()
+			return redirect('/domicilios')
 	else:
-		formaPersona = PersonaForm()
+		formaDomicilio = DomicilioForm()
 
-	return render(request, 'personas/nuevo.html', {'formaPersona':formaPersona})
+	return render(request, 'personas/nuevo_domicilio.html', {'formaDomicilio':formaDomicilio})
 
-#*** Metodo de ver que equivale al Update de nuestro CRUD *************
-def editarPersona(request, id):
-	persona = get_object_or_404(Persona, pk=id)
+#*** EDITAR, equivale al Update de nuestro CRUD *************
+def editarDomicilio(request, id):
+	domicilio = get_object_or_404(Domicilio, pk=id)
 	if request.method == 'POST':
-		formaPersona = PersonaForm(request.POST, instance=persona)
-		if formaPersona.is_valid():
-			formaPersona.save()
-			return redirect('home')
+		formaDomicilio = DomicilioForm(request.POST, instance=domicilio)
+		if formaDomicilio.is_valid():
+			formaDomicilio.save()
+			return redirect('/domicilios')
 	else:
-		formaPersona = PersonaForm(instance=persona)
+		formaDomicilio = DomicilioForm(instance=domicilio)
 
-	return render(request, 'personas/editar.html', {'formaPersona':formaPersona})
+	return render(request, 'personas/editar_domicilio.html', {'formaDomicilio':formaDomicilio})
 
-#*** Metodo de ver que equivale al Delete de nuestro CRUD *************
-def eliminarPersona(request, id):
-	persona = get_object_or_404(Persona, pk=id)
-	if persona:
-		persona.delete()
-	return redirect('home')
-'''
+#*** ELIMINAR, equivale al Delete de nuestro CRUD *************
+def eliminarDomicilio(request, id):
+	domicilio = get_object_or_404(Domicilio, pk=id)
+	if domicilio:
+		domicilio.delete()
+	return redirect('/domicilios')

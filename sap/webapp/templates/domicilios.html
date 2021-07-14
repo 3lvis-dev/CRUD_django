@@ -7,7 +7,7 @@
 <body>
 	
 	<div>
-		<a href="{% url 'home' %}">Regresar al Home</a>
+		<a href="{% url 'home' %}"><strong>VOLVER AL HOME</strong></a>
 	</div>
 	<h2>Domicilios</h2>
 	<div>
@@ -15,8 +15,13 @@
 	</div>
 <br/>
 	<div>
+		
+	</div>
+
+	<div>
 		<table border="1">
 			<thead>
+				<th colspan="7"><a href="nuevo_domicilio"><strong>AGREGAR DOMICILIO</strong></a></th>
 				<tr>
 					<th>ID:</th>
 					<th>Calle</th>
@@ -35,8 +40,8 @@
 					<td>{{domicilio.no_calle}}</td>
 					<td>{{domicilio.pais}}</td>
 					<td><a href="detalle_domicilio/{{domicilio.id}}">Ver</a></td>
-					<td><a href="#">Editar</a></td>
-					<td><a href="#">Eliminar</a></td>
+					<td><a href="editar_domicilio/{{domicilio.id}}">Editar</a></td>
+					<td><a href="eliminar_domicilio/{{domicilio.id}}">Eliminar</a></td>
 				</tr>
 				{% endfor %}
 			</tbody>

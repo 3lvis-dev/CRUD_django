@@ -5,10 +5,28 @@
 	<title>Nuevo Persona</title>
 </head>
 <body>
-	<h2>Nueva Persona</h2>
+
+<div>
+	<a href="{% url 'home' %}"><strong>VOLVER AL HOME</strong></a>
+</div>
+
+<h2><strong>Sistema de Administración de Personas</strong></h2>
+
 	<form method="POST">
-		<table>{{formaPersona}}</table>
-		<button type="submit">Enviar</button>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="100%">Nueva Persona</th>
+				</tr>
+			</thead>
+				<tbody>
+					<tr>
+						<td>{{formaPersona}}</td>
+					</tr>
+				</tbody>
+		</table>
+		<br/>
+		<button type="submit">NUEVO</button>
 		{% csrf_token %}
 	</form>
 
